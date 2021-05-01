@@ -1,0 +1,126 @@
+(* ********************************************************* *)
+(* *****                                               ***** *)
+(* *****  FeynRules model file: Axion EFT              ***** *)
+(* *****  Author: A. Greljo                            ***** *)
+(* *****                                               ***** *)
+(* ********************************************************* *)
+
+(* ************************** *)
+(* *****  Information   ***** *)
+(* ************************** *)
+M$ModelName = "AxionEFT";
+
+M$Information = {
+  Authors      -> {"Yang Ma","Yongcheng Wu"},
+  Version      -> "1.0",
+  Date         -> "04. 24. 21",
+  Institutions -> {"University of Pittsburgh","Okholama State University"},
+  Emails       -> {"mayangluon@pitt.edu","ywu@okstate.edu"}
+};
+
+FeynmanGauge = True;
+
+(* ************************** *)
+(* *** Interaction orders *** *)
+(* ***  (as used by mg5)  *** *)
+(* ************************** *)
+M$InteractionOrderHierarchy = { {QCD, 1},  {QED, 2},  {NP,1} };
+M$InteractionOrderLimit     = { {QCD, 99}, {QED, 99}, {NP,1} };
+
+(* ************************** *)
+(* **** Particle classes **** *)
+(* ************************** *)
+M$ClassesDescription = {
+  S[22] == {
+    ClassName       -> ALP,
+    SelfConjugate   -> True,
+    Mass            -> {MALP,0},
+    Width           -> {WALP,0},
+    PropagatorLabel -> "aa",
+    PropagatorType  -> D,
+    PropagatorArrow -> None,
+    PDG             -> 5005,
+    ParticleName    -> "ALP",
+    FullName        -> "Axion"
+  }
+};
+
+(* ************************** *)
+(* *****   Parameters   ***** *)
+(* ************************** *)
+M$Parameters = {
+
+(* External parameters *)
+   fa == {
+    ParameterType    -> External,
+    ComplexParameter -> False,
+    BlockName        -> AxionCoup,
+    OrderBlock       -> 1,
+    Value            -> 1.0,
+    Description      -> "ALP decay constant"},
+   cGt == {
+    ParameterType    -> External,
+    ComplexParameter -> False,
+    BlockName        -> AxionCoup,
+    OrderBlock       -> 2,
+    Value            -> 1.0,
+    Description      -> "ALP EFT coefficient cgg"},
+   cBt == {
+    ParameterType    -> External,
+    ComplexParameter -> False,
+    BlockName        -> AxionCoup,
+    OrderBlock       -> 3,
+    Value            -> 1.0,
+    Description      -> "ALP EFT coefficient cBB"},
+   cWt == {
+    ParameterType    -> External,
+    ComplexParameter -> False,
+    BlockName        -> AxionCoup,
+    OrderBlock       -> 4,
+    Value            -> 1.0,
+    Description      -> "ALP EFT coefficient cWW"},
+   caPhi == {
+    ParameterType    -> External,
+    ComplexParameter -> False,
+    BlockName        -> AxionCoup,
+    OrderBlock       -> 5,
+    Value            -> 1.0,
+    Description      -> "ALP EFT coefficient caphi"},
+  
+  (* Internal Parameters *)
+  gALPG == {
+    ParameterType    -> Internal,
+    Value            -> cGt/fa,
+    InteractionOrder -> {NP,1},
+    Description      -> "ALP agg coupling"
+  },
+  gALPB == {
+    ParameterType    -> Internal,
+    Value            -> cBt/fa,
+    InteractionOrder -> {NP,1},
+    Description      -> "ALP aBB coupling"
+  },
+  gALPW == {
+    ParameterType    -> Internal,
+    Value            -> cWt/fa,
+    InteractionOrder -> {NP,1},
+    Description      -> "ALP aWW coupling"
+  },
+  gALPp == {
+    ParameterType    -> Internal,
+    Value            -> caPhi/fa,
+    InteractionOrder -> {NP,1},
+    Description      -> "ALP aWW coupling"
+  }
+};
+
+(* ************************** *)
+(* *****   Lagrangian   ***** *)
+(* ************************** *)
+
+LALPk := Block[{mu},1/2 del[ALP,mu] del[ALP,mu]-1/2 MALP^2 ALP^2];
+
+Leff := Block[{mu,nu,ii,aa}, 
+  ExpandIndices[- gALPG ALP FS[G,mu,nu,aa] Dual[FS][G,mu,nu,aa] -gALPB ALP FS[B,mu,nu] Dual[FS][B,mu,nu] - gALPW ALP FS[Wi,mu,nu,ii] Dual[FS][Wi,mu,nu,ii] + I gALPp ALP del[ALP,mu] (Phibar[ii] DC[Phi[ii],mu]-DC[Phibar[ii],mu] Phi[ii])  , FlavorExpand->SU2W]];
+
+LALP := LALPk + Leff;
