@@ -1,6 +1,6 @@
 # This file was automatically created by FeynRules 2.3.36
 # Mathematica version: 11.3.0 for Linux x86 (64-bit) (March 7, 2018)
-# Date: Sat 1 May 2021 16:15:21
+# Date: Sat 1 May 2021 21:52:46
 
 
 
@@ -314,52 +314,4 @@ I4a33 = Parameter(name = 'I4a33',
                   type = 'complex',
                   value = 'yb',
                   texname = '\\text{I4a33}')
-
-I5a1 = Parameter(name = 'I5a1',
-                 nature = 'internal',
-                 type = 'complex',
-                 value = '1',
-                 texname = '\\text{I5a1}')
-
-I5a2 = Parameter(name = 'I5a2',
-                 nature = 'internal',
-                 type = 'complex',
-                 value = '1',
-                 texname = '\\text{I5a2}')
-
-I6a1 = Parameter(name = 'I6a1',
-                 nature = 'internal',
-                 type = 'complex',
-                 value = '1',
-                 texname = '\\text{I6a1}')
-
-I6a2 = Parameter(name = 'I6a2',
-                 nature = 'internal',
-                 type = 'complex',
-                 value = '1',
-                 texname = '\\text{I6a2}')
-
-I7a1 = Parameter(name = 'I7a1',
-                 nature = 'internal',
-                 type = 'complex',
-                 value = '1',
-                 texname = '\\text{I7a1}')
-
-I7a2 = Parameter(name = 'I7a2',
-                 nature = 'internal',
-                 type = 'complex',
-                 value = '1',
-                 texname = '\\text{I7a2}')
-
-I8a1 = Parameter(name = 'I8a1',
-                 nature = 'internal',
-                 type = 'complex',
-                 value = '1',
-                 texname = '\\text{I8a1}')
-
-I8a2 = Parameter(name = 'I8a2',
-                 nature = 'internal',
-                 type = 'complex',
-                 value = '1',
-                 texname = '\\text{I8a2}')
 

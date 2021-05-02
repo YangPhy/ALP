@@ -1,6 +1,6 @@
 # This file was automatically created by FeynRules 2.3.36
 # Mathematica version: 11.3.0 for Linux x86 (64-bit) (March 7, 2018)
-# Date: Sat 1 May 2021 16:15:21
+# Date: Sat 1 May 2021 21:52:46
 
 
 from object_library import all_couplings, Coupling
@@ -304,56 +304,4 @@ GC_73 = Coupling(name = 'GC_73',
 GC_74 = Coupling(name = 'GC_74',
                  value = '-((complex(0,1)*ytau)/cmath.sqrt(2))',
                  order = {'QED':1})
-
-GC_75 = Coupling(name = 'GC_75',
-                 value = '-(ee*gALPp*I7(4)*I8(5)*PauliSigma(1,ii,i$3683))/(2.*sw*cmath.sqrt(2))',
-                 order = {'NP':1,'QED':1,'PRIVATE`GetIntOrder[I7[Index[SU2D, Ext[4]]]]':1,'PRIVATE`GetIntOrder[I8[Index[SU2D, Ext[5]]]]':1,'PRIVATE`GetIntOrder[PauliSigma[1, ii, i$3683]]':1})
-
-GC_76 = Coupling(name = 'GC_76',
-                 value = '-(ee*gALPp*I7(4)*I8(5)*PauliSigma(1,i$3684,ii))/(2.*sw*cmath.sqrt(2))',
-                 order = {'NP':1,'QED':1,'PRIVATE`GetIntOrder[I7[Index[SU2D, Ext[4]]]]':1,'PRIVATE`GetIntOrder[I8[Index[SU2D, Ext[5]]]]':1,'PRIVATE`GetIntOrder[PauliSigma[1, i$3684, ii]]':1})
-
-GC_77 = Coupling(name = 'GC_77',
-                 value = '-(ee*complex(0,1)*gALPp*I7(4)*I8(5)*PauliSigma(2,ii,i$3683))/(2.*sw*cmath.sqrt(2))',
-                 order = {'NP':1,'QED':1,'PRIVATE`GetIntOrder[I7[Index[SU2D, Ext[4]]]]':1,'PRIVATE`GetIntOrder[I8[Index[SU2D, Ext[5]]]]':1,'PRIVATE`GetIntOrder[PauliSigma[2, ii, i$3683]]':1})
-
-GC_78 = Coupling(name = 'GC_78',
-                 value = '(ee*complex(0,1)*gALPp*I7(4)*I8(5)*PauliSigma(2,ii,i$3683))/(2.*sw*cmath.sqrt(2))',
-                 order = {'NP':1,'QED':1,'PRIVATE`GetIntOrder[I7[Index[SU2D, Ext[4]]]]':1,'PRIVATE`GetIntOrder[I8[Index[SU2D, Ext[5]]]]':1,'PRIVATE`GetIntOrder[PauliSigma[2, ii, i$3683]]':1})
-
-GC_79 = Coupling(name = 'GC_79',
-                 value = '-(ee*complex(0,1)*gALPp*I7(4)*I8(5)*PauliSigma(2,i$3684,ii))/(2.*sw*cmath.sqrt(2))',
-                 order = {'NP':1,'QED':1,'PRIVATE`GetIntOrder[I7[Index[SU2D, Ext[4]]]]':1,'PRIVATE`GetIntOrder[I8[Index[SU2D, Ext[5]]]]':1,'PRIVATE`GetIntOrder[PauliSigma[2, i$3684, ii]]':1})
-
-GC_80 = Coupling(name = 'GC_80',
-                 value = '(ee*complex(0,1)*gALPp*I7(4)*I8(5)*PauliSigma(2,i$3684,ii))/(2.*sw*cmath.sqrt(2))',
-                 order = {'NP':1,'QED':1,'PRIVATE`GetIntOrder[I7[Index[SU2D, Ext[4]]]]':1,'PRIVATE`GetIntOrder[I8[Index[SU2D, Ext[5]]]]':1,'PRIVATE`GetIntOrder[PauliSigma[2, i$3684, ii]]':1})
-
-GC_81 = Coupling(name = 'GC_81',
-                 value = '-(ee*gALPp*I5(4)*I6(5)*PauliSigma(3,ii,i$3683))/2.',
-                 order = {'NP':1,'QED':1,'PRIVATE`GetIntOrder[I5[Index[SU2D, Ext[4]]]]':1,'PRIVATE`GetIntOrder[I6[Index[SU2D, Ext[5]]]]':1,'PRIVATE`GetIntOrder[PauliSigma[3, ii, i$3683]]':1})
-
-GC_82 = Coupling(name = 'GC_82',
-                 value = '-(cw*ee*gALPp*I7(4)*I8(5)*PauliSigma(3,ii,i$3683))/(2.*sw)',
-                 order = {'NP':1,'QED':1,'PRIVATE`GetIntOrder[I7[Index[SU2D, Ext[4]]]]':1,'PRIVATE`GetIntOrder[I8[Index[SU2D, Ext[5]]]]':1,'PRIVATE`GetIntOrder[PauliSigma[3, ii, i$3683]]':1})
-
-GC_83 = Coupling(name = 'GC_83',
-                 value = '-(ee*gALPp*I5(4)*I6(5)*PauliSigma(3,i$3684,ii))/2.',
-                 order = {'NP':1,'QED':1,'PRIVATE`GetIntOrder[I5[Index[SU2D, Ext[4]]]]':1,'PRIVATE`GetIntOrder[I6[Index[SU2D, Ext[5]]]]':1,'PRIVATE`GetIntOrder[PauliSigma[3, i$3684, ii]]':1})
-
-GC_84 = Coupling(name = 'GC_84',
-                 value = '-(cw*ee*gALPp*I7(4)*I8(5)*PauliSigma(3,i$3684,ii))/(2.*sw)',
-                 order = {'NP':1,'QED':1,'PRIVATE`GetIntOrder[I7[Index[SU2D, Ext[4]]]]':1,'PRIVATE`GetIntOrder[I8[Index[SU2D, Ext[5]]]]':1,'PRIVATE`GetIntOrder[PauliSigma[3, i$3684, ii]]':1})
-
-GC_85 = Coupling(name = 'GC_85',
-                 value = 'gALPp*P$IndexDelta(3,4)',
-                 order = {'NP':1,'PRIVATE`GetIntOrder[P$IndexDelta[Index[SU2D, Ext[3]], Index[SU2D, Ext[4]]]]':1})
-
-GC_86 = Coupling(name = 'GC_86',
-                 value = '-(ee*gALPp*P$IndexDelta(4,5))',
-                 order = {'NP':1,'QED':1,'PRIVATE`GetIntOrder[P$IndexDelta[Index[SU2D, Ext[4]], Index[SU2D, Ext[5]]]]':1})
-
-GC_87 = Coupling(name = 'GC_87',
-                 value = '(ee*gALPp*sw*P$IndexDelta(4,5))/cw',
-                 order = {'NP':1,'QED':1,'PRIVATE`GetIntOrder[P$IndexDelta[Index[SU2D, Ext[4]], Index[SU2D, Ext[5]]]]':1})
 

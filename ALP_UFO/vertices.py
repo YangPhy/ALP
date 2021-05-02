@@ -1,6 +1,6 @@
 # This file was automatically created by FeynRules 2.3.36
 # Mathematica version: 11.3.0 for Linux x86 (64-bit) (March 7, 2018)
-# Date: Sat 1 May 2021 16:15:21
+# Date: Sat 1 May 2021 21:52:46
 
 
 from object_library import all_vertices, Vertex
@@ -760,104 +760,14 @@ V_125 = Vertex(name = 'V_125',
                couplings = {(0,0):C.GC_14})
 
 V_126 = Vertex(name = 'V_126',
-               particles = [ P.ALP, P.ALP, P.<>CreateObjectParticleName[PartNameMG[Phibar]], P.<>CreateObjectParticleName[PartNameMG[Phi]] ],
-               color = [ '1' ],
-               lorentz = [ L.SSSS2 ],
-               couplings = {(0,0):C.GC_85})
-
-V_127 = Vertex(name = 'V_127',
-               particles = [ P.a, P.ALP, P.ALP, P.<>CreateObjectParticleName[PartNameMG[Phibar]], P.<>CreateObjectParticleName[PartNameMG[Phi]] ],
-               color = [ '1' ],
-               lorentz = [ L.VSSSS1 ],
-               couplings = {(0,0):C.GC_81})
-
-V_128 = Vertex(name = 'V_128',
-               particles = [ P.a, P.ALP, P.ALP, P.<>CreateObjectParticleName[PartNameMG[Phibar]], P.<>CreateObjectParticleName[PartNameMG[Phi]] ],
-               color = [ '1' ],
-               lorentz = [ L.VSSSS1 ],
-               couplings = {(0,0):C.GC_83})
-
-V_129 = Vertex(name = 'V_129',
-               particles = [ P.a, P.ALP, P.ALP, P.<>CreateObjectParticleName[PartNameMG[Phibar]], P.<>CreateObjectParticleName[PartNameMG[Phi]] ],
-               color = [ '1' ],
-               lorentz = [ L.VSSSS1 ],
-               couplings = {(0,0):C.GC_86})
-
-V_130 = Vertex(name = 'V_130',
                particles = [ P.a, P.W__minus__, P.W__plus__, P.ALP ],
                color = [ '1' ],
                lorentz = [ L.VVVS1 ],
                couplings = {(0,0):C.GC_16})
 
-V_131 = Vertex(name = 'V_131',
-               particles = [ P.W__minus__, P.ALP, P.ALP, P.<>CreateObjectParticleName[PartNameMG[Phibar]], P.<>CreateObjectParticleName[PartNameMG[Phi]] ],
-               color = [ '1' ],
-               lorentz = [ L.VSSSS1 ],
-               couplings = {(0,0):C.GC_75})
-
-V_132 = Vertex(name = 'V_132',
-               particles = [ P.W__minus__, P.ALP, P.ALP, P.<>CreateObjectParticleName[PartNameMG[Phibar]], P.<>CreateObjectParticleName[PartNameMG[Phi]] ],
-               color = [ '1' ],
-               lorentz = [ L.VSSSS1 ],
-               couplings = {(0,0):C.GC_76})
-
-V_133 = Vertex(name = 'V_133',
-               particles = [ P.W__minus__, P.ALP, P.ALP, P.<>CreateObjectParticleName[PartNameMG[Phibar]], P.<>CreateObjectParticleName[PartNameMG[Phi]] ],
-               color = [ '1' ],
-               lorentz = [ L.VSSSS1 ],
-               couplings = {(0,0):C.GC_77})
-
-V_134 = Vertex(name = 'V_134',
-               particles = [ P.W__minus__, P.ALP, P.ALP, P.<>CreateObjectParticleName[PartNameMG[Phibar]], P.<>CreateObjectParticleName[PartNameMG[Phi]] ],
-               color = [ '1' ],
-               lorentz = [ L.VSSSS1 ],
-               couplings = {(0,0):C.GC_79})
-
-V_135 = Vertex(name = 'V_135',
-               particles = [ P.W__plus__, P.ALP, P.ALP, P.<>CreateObjectParticleName[PartNameMG[Phibar]], P.<>CreateObjectParticleName[PartNameMG[Phi]] ],
-               color = [ '1' ],
-               lorentz = [ L.VSSSS1 ],
-               couplings = {(0,0):C.GC_75})
-
-V_136 = Vertex(name = 'V_136',
-               particles = [ P.W__plus__, P.ALP, P.ALP, P.<>CreateObjectParticleName[PartNameMG[Phibar]], P.<>CreateObjectParticleName[PartNameMG[Phi]] ],
-               color = [ '1' ],
-               lorentz = [ L.VSSSS1 ],
-               couplings = {(0,0):C.GC_76})
-
-V_137 = Vertex(name = 'V_137',
-               particles = [ P.W__plus__, P.ALP, P.ALP, P.<>CreateObjectParticleName[PartNameMG[Phibar]], P.<>CreateObjectParticleName[PartNameMG[Phi]] ],
-               color = [ '1' ],
-               lorentz = [ L.VSSSS1 ],
-               couplings = {(0,0):C.GC_78})
-
-V_138 = Vertex(name = 'V_138',
-               particles = [ P.W__plus__, P.ALP, P.ALP, P.<>CreateObjectParticleName[PartNameMG[Phibar]], P.<>CreateObjectParticleName[PartNameMG[Phi]] ],
-               color = [ '1' ],
-               lorentz = [ L.VSSSS1 ],
-               couplings = {(0,0):C.GC_80})
-
-V_139 = Vertex(name = 'V_139',
+V_127 = Vertex(name = 'V_127',
                particles = [ P.W__minus__, P.W__plus__, P.Z, P.ALP ],
                color = [ '1' ],
                lorentz = [ L.VVVS1 ],
                couplings = {(0,0):C.GC_39})
-
-V_140 = Vertex(name = 'V_140',
-               particles = [ P.Z, P.ALP, P.ALP, P.<>CreateObjectParticleName[PartNameMG[Phibar]], P.<>CreateObjectParticleName[PartNameMG[Phi]] ],
-               color = [ '1' ],
-               lorentz = [ L.VSSSS1 ],
-               couplings = {(0,0):C.GC_82})
-
-V_141 = Vertex(name = 'V_141',
-               particles = [ P.Z, P.ALP, P.ALP, P.<>CreateObjectParticleName[PartNameMG[Phibar]], P.<>CreateObjectParticleName[PartNameMG[Phi]] ],
-               color = [ '1' ],
-               lorentz = [ L.VSSSS1 ],
-               couplings = {(0,0):C.GC_84})
-
-V_142 = Vertex(name = 'V_142',
-               particles = [ P.Z, P.ALP, P.ALP, P.<>CreateObjectParticleName[PartNameMG[Phibar]], P.<>CreateObjectParticleName[PartNameMG[Phi]] ],
-               color = [ '1' ],
-               lorentz = [ L.VSSSS1 ],
-               couplings = {(0,0):C.GC_87})
 

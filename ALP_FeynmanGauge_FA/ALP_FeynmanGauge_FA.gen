@@ -90,22 +90,12 @@ G[-1][s1 F[j1], s2 F[j2], s3 V[j3]].{NonCommutative[DiracMatrix[li3], ChiralityP
 	 (* SSS *)
 
 AnalyticalCoupling[s1 S[j1, mom1], s2 S[j2, mom2], s3 S[j3, mom3] ] ==
-G[+1][s1 S[j1], s2 S[j2], s3 S[j3]].{1, ScalarProduct[mom1,mom3], ScalarProduct[mom2,mom3], ScalarProduct[mom1,mom2]},
+G[+1][s1 S[j1], s2 S[j2], s3 S[j3]].{1},
 
 	 (* SSSS *)
 
 AnalyticalCoupling[s1 S[j1, mom1], s2 S[j2, mom2], s3 S[j3, mom3], s4 S[j4, mom4] ] ==
-G[+1][s1 S[j1], s2 S[j2], s3 S[j3], s4 S[j4]].{1, ScalarProduct[mom1,mom3], ScalarProduct[mom1,mom4], ScalarProduct[mom2,mom3], ScalarProduct[mom2,mom4], ScalarProduct[mom1,mom2], ScalarProduct[mom3,mom4]},
-
-	 (* SSSSV *)
-
-AnalyticalCoupling[s1 S[j1, mom1], s2 S[j2, mom2], s3 S[j3, mom3], s4 S[j4, mom4], s5 V[j5, mom5, {li5}] ] ==
-G[+1][s1 S[j1], s2 S[j2], s3 S[j3], s4 S[j4], s5 V[j5]].{FourVector[mom1, li5], FourVector[mom2, li5], FourVector[mom3, li5], FourVector[mom4, li5]},
-
-	 (* SSSV *)
-
-AnalyticalCoupling[s1 S[j1, mom1], s2 S[j2, mom2], s3 S[j3, mom3], s4 V[j4, mom4, {li4}] ] ==
-G[+1][s1 S[j1], s2 S[j2], s3 S[j3], s4 V[j4]].{FourVector[mom1, li4], FourVector[mom2, li4], FourVector[mom3, li4]},
+G[+1][s1 S[j1], s2 S[j2], s3 S[j3], s4 S[j4]].{1},
 
 	 (* SSV *)
 
