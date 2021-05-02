@@ -12,7 +12,7 @@ M$ModelName = "AxionEFT";
 
 M$Information = {
   Authors      -> {"Yang Ma","Yongcheng Wu"},
-  Version      -> "1.0",
+  Version      -> "1.0.1",
   Date         -> "04. 24. 21",
   Institutions -> {"University of Pittsburgh","Okholama State University"},
   Emails       -> {"mayangluon@pitt.edu","ywu@okstate.edu"}
@@ -24,8 +24,8 @@ FeynmanGauge = True;
 (* *** Interaction orders *** *)
 (* ***  (as used by mg5)  *** *)
 (* ************************** *)
-M$InteractionOrderHierarchy = { {QCD, 1},  {QED, 2},  {NP,1} };
-M$InteractionOrderLimit     = { {QCD, 99}, {QED, 99}, {NP,1} };
+M$InteractionOrderHierarchy = { {QCD, 1},  {QED, 2},  {NP,2} };
+M$InteractionOrderLimit     = { {QCD, 99}, {QED, 99}, {NP,99} };
 
 (* ************************** *)
 (* **** Particle classes **** *)
