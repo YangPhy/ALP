@@ -1,6 +1,6 @@
 # This file was automatically created by FeynRules 2.3.36
 # Mathematica version: 11.3.0 for Mac OS X x86 (64-bit) (March 7, 2018)
-# Date: Sat 1 May 2021 23:31:22
+# Date: Sun 2 May 2021 20:34:44
 
 
 from __future__ import division
@@ -390,8 +390,8 @@ ALP = Particle(pdg_code = 5005,
                antiname = 'ALP',
                spin = 1,
                color = 1,
-               mass = Param.ZERO,
-               width = Param.ZERO,
+               mass = Param.MALP,
+               width = Param.WALP,
                texname = 'ALP',
                antitexname = 'ALP',
                charge = 0,

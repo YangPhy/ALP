@@ -1,6 +1,6 @@
 # This file was automatically created by FeynRules 2.3.36
 # Mathematica version: 11.3.0 for Mac OS X x86 (64-bit) (March 7, 2018)
-# Date: Sat 1 May 2021 23:31:22
+# Date: Sun 2 May 2021 20:34:44
 
 
 
@@ -145,6 +145,14 @@ MH = Parameter(name = 'MH',
                lhablock = 'MASS',
                lhacode = [ 25 ])
 
+MALP = Parameter(name = 'MALP',
+                 nature = 'external',
+                 type = 'real',
+                 value = 0.1,
+                 texname = '\\text{MALP}',
+                 lhablock = 'MASS',
+                 lhacode = [ 5005 ])
+
 WZ = Parameter(name = 'WZ',
                nature = 'external',
                type = 'real',
@@ -176,6 +184,14 @@ WH = Parameter(name = 'WH',
                texname = '\\text{WH}',
                lhablock = 'DECAY',
                lhacode = [ 25 ])
+
+WALP = Parameter(name = 'WALP',
+                 nature = 'external',
+                 type = 'real',
+                 value = 0.001,
+                 texname = '\\text{WALP}',
+                 lhablock = 'DECAY',
+                 lhacode = [ 5005 ])
 
 aEW = Parameter(name = 'aEW',
                 nature = 'internal',

@@ -34,8 +34,8 @@ M$ClassesDescription = {
   S[4] == {
     ClassName       -> ALP,
     SelfConjugate   -> True,
-    Mass            -> {MALP,0},
-    Width           -> {WALP,0},
+    Mass            -> {MALP,0.1},
+    Width           -> {WALP,0.001},
     PropagatorLabel -> "aa",
     PropagatorType  -> D,
     PropagatorArrow -> None,

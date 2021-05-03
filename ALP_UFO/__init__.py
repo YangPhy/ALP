@@ -47,4 +47,4 @@ gauge = [0, 1]
 
 __author__ = "Yang Ma, Yongcheng Wu"
 __date__ = "04. 24. 21"
-__version__= "1.0"
+__version__= "1.0.1"

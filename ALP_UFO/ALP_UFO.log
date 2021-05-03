@@ -1,13 +1,13 @@
 # This file was automatically created by FeynRules 2.3.36
 # Mathematica version: 11.3.0 for Mac OS X x86 (64-bit) (March 7, 2018)
-# Date: Sat 1 May 2021 23:30:37
+# Date: Sun 2 May 2021 20:33:50
 
 
 # 
 # This is the logfile for the model AxionEFT
 
 # Authors: Yang Ma, Yongcheng Wu
-# Model version: 1.0
+# Model version: 1.0.1
 # Checking the Quantum numbers
    * Electric charge defined.
 # Checking the Lagrangians
