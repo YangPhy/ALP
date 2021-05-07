@@ -120,9 +120,10 @@ M$Parameters = {
 
 LALPk := Block[{mu},1/2 del[ALP,mu] del[ALP,mu]-1/2 MALP^2 ALP^2];
 
-Leff := Block[{mu,nu,ii,aa}, 
+Leff := Block[{mu,nu,ii,aa,feynmangaugerules}, 
+  feynmangaugerules = If[Not[FeynmanGauge], {G0|GP|GPbar ->0}, {}];
   ExpandIndices[- gALPG ALP FS[G,mu,nu,aa] Dual[FS][G,mu,nu,aa]
   - gALPB ALP FS[B,mu,nu] Dual[FS][B,mu,nu] - gALPW ALP FS[Wi,mu,nu,ii] Dual[FS][Wi,mu,nu,ii] 
-  (*+ I gALPp del[ALP,mu] (Phibar[ii] DC[Phi[ii],mu]-DC[Phibar[ii],mu] Phi[ii]) *) , FlavorExpand->{SU2D,SU2W}]];
+  (*+ I gALPp del[ALP,mu] (Phibar[ii] DC[Phi[ii],mu]-DC[Phibar[ii],mu] Phi[ii])*), FlavorExpand->{SU2D,SU2W}]/.feynmangaugerules];
 
 LALP := LALPk + Leff;
