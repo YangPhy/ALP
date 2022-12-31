@@ -1,6 +1,6 @@
-# This file was automatically created by FeynRules 2.3.36
-# Mathematica version: 11.3.0 for Mac OS X x86 (64-bit) (March 7, 2018)
-# Date: Sun 2 May 2021 20:34:44
+# This file was automatically created by FeynRules 2.3.49
+# Mathematica version: 13.1.0 for Mac OS X ARM (64-bit) (June 16, 2022)
+# Date: Sat 31 Dec 2022 16:22:34
 
 
 from object_library import all_lorentz, Lorentz
@@ -12,10 +12,6 @@ except ImportError:
    pass
 
 
-UUS1 = Lorentz(name = 'UUS1',
-               spins = [ -1, -1, 1 ],
-               structure = '1')
-
 UUV1 = Lorentz(name = 'UUV1',
                spins = [ -1, -1, 3 ],
                structure = 'P(3,2) + P(3,3)')
@@ -25,18 +21,6 @@ SSS1 = Lorentz(name = 'SSS1',
                structure = '1')
 
 FFS1 = Lorentz(name = 'FFS1',
-               spins = [ 2, 2, 1 ],
-               structure = 'ProjM(2,1)')
-
-FFS2 = Lorentz(name = 'FFS2',
-               spins = [ 2, 2, 1 ],
-               structure = 'ProjM(2,1) - ProjP(2,1)')
-
-FFS3 = Lorentz(name = 'FFS3',
-               spins = [ 2, 2, 1 ],
-               structure = 'ProjP(2,1)')
-
-FFS4 = Lorentz(name = 'FFS4',
                spins = [ 2, 2, 1 ],
                structure = 'ProjM(2,1) + ProjP(2,1)')
 
@@ -50,19 +34,11 @@ FFV2 = Lorentz(name = 'FFV2',
 
 FFV3 = Lorentz(name = 'FFV3',
                spins = [ 2, 2, 3 ],
-               structure = 'Gamma(3,2,-1)*ProjM(-1,1) - 2*Gamma(3,2,-1)*ProjP(-1,1)')
+               structure = 'Gamma(3,2,-1)*ProjP(-1,1)')
 
 FFV4 = Lorentz(name = 'FFV4',
                spins = [ 2, 2, 3 ],
                structure = 'Gamma(3,2,-1)*ProjM(-1,1) + 2*Gamma(3,2,-1)*ProjP(-1,1)')
-
-FFV5 = Lorentz(name = 'FFV5',
-               spins = [ 2, 2, 3 ],
-               structure = 'Gamma(3,2,-1)*ProjM(-1,1) + 4*Gamma(3,2,-1)*ProjP(-1,1)')
-
-VSS1 = Lorentz(name = 'VSS1',
-               spins = [ 3, 1, 1 ],
-               structure = 'P(1,2) - P(1,3)')
 
 VVS1 = Lorentz(name = 'VVS1',
                spins = [ 3, 3, 1 ],

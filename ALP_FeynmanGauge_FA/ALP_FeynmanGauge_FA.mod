@@ -8,7 +8,7 @@
 FR$ModelInformation={
   ModelName->"AxionEFT",
   Authors -> {"Yang Ma", "Yongcheng Wu"},
-  Version -> "1.0",
+  Version -> "1.0.1",
   Date -> "04. 24. 21",
   Institutions -> {"University of Pittsburgh", "Okholama State University"},
   Emails -> {"mayangluon@pitt.edu", "ywu@okstate.edu"}};
@@ -142,7 +142,7 @@ F[3] == {
 F[4] == {
     Indices -> {Index[Generation], Index[Colour]},
     SelfConjugate -> False,
-    QuantumNumbers -> {-Q/3},
+    QuantumNumbers -> {-1/3*Q},
     PropagatorLabel -> "dq",
     PropagatorType -> Straight,
     PropagatorArrow -> Forward,
@@ -178,7 +178,7 @@ S[4] == {
     PropagatorLabel -> "aa",
     PropagatorType -> ScalarDash,
     PropagatorArrow -> None,
-    Mass -> 0,
+    Mass -> MALP,
     Indices -> {} }
 }
 
@@ -216,6 +216,7 @@ Md[ 2 ] := MS;
 Md[ 3, _ ] := MB;
 Md[ 3 ] := MB;
 MH[ ___ ] := MH;
+MALP[ ___ ] := MALP;
 
 
 TheLabel[ V[4, {__}] ] := TheLabel[V[4]];
@@ -274,9 +275,9 @@ C[ -S[3] , -U[32] , U[1] ] == {{(EL^2*vev)/(2*sw), 0}},
 
 C[ -U[32] , U[1] , -V[3] ] == {{I*gc15, 0}, {I*gc15, 0}, {0, 0}},
 
-C[ S[2] , -U[32] , U[32] ] == {{-(EL^2*vev)/(4*sw^2), 0}},
+C[ S[2] , -U[32] , U[32] ] == {{-1/4*(EL^2*vev)/sw^2, 0}},
 
-C[ S[1] , -U[32] , U[32] ] == {{((-I/4)*EL^2*vev)/sw^2, 0}},
+C[ S[1] , -U[32] , U[32] ] == {{((-1/4*I)*EL^2*vev)/sw^2, 0}},
 
 C[ -U[32] , U[32] , V[1] ] == {{I*gc18, 0}, {I*gc18, 0}, {0, 0}},
 
@@ -286,19 +287,19 @@ C[ -S[3] , -U[32] , U[2] ] == {{(EL^2*(cw - sw)*(cw + sw)*vev)/(4*cw*sw^2), 0}},
 
 C[ -U[32] , U[2] , -V[3] ] == {{I*gc21, 0}, {I*gc21, 0}, {0, 0}},
 
-C[ S[3] , -U[31] , U[1] ] == {{-(EL^2*vev)/(2*sw), 0}},
+C[ S[3] , -U[31] , U[1] ] == {{-1/2*(EL^2*vev)/sw, 0}},
 
 C[ -U[31] , U[1] , V[3] ] == {{I*gc23, 0}, {I*gc23, 0}, {0, 0}},
 
 C[ S[2] , -U[31] , U[31] ] == {{(EL^2*vev)/(4*sw^2), 0}},
 
-C[ S[1] , -U[31] , U[31] ] == {{((-I/4)*EL^2*vev)/sw^2, 0}},
+C[ S[1] , -U[31] , U[31] ] == {{((-1/4*I)*EL^2*vev)/sw^2, 0}},
 
 C[ -U[31] , U[31] , V[1] ] == {{I*gc26, 0}, {I*gc26, 0}, {0, 0}},
 
 C[ -U[31] , U[31] , V[2] ] == {{I*gc27, 0}, {I*gc27, 0}, {0, 0}},
 
-C[ S[3] , -U[31] , U[2] ] == {{-(EL^2*(cw - sw)*(cw + sw)*vev)/(4*cw*sw^2), 0}},
+C[ S[3] , -U[31] , U[2] ] == {{-1/4*(EL^2*(cw - sw)*(cw + sw)*vev)/(cw*sw^2), 0}},
 
 C[ -U[31] , U[2] , V[3] ] == {{I*gc29, 0}, {I*gc29, 0}, {0, 0}},
 
@@ -306,11 +307,11 @@ C[ S[3] , -U[2] , U[32] ] == {{(EL^2*(cw^2 + sw^2)*vev)/(4*cw*sw^2), 0}},
 
 C[ -U[2] , U[32] , V[3] ] == {{I*gc31, 0}, {I*gc31, 0}, {0, 0}},
 
-C[ -S[3] , -U[2] , U[31] ] == {{-(EL^2*(cw^2 + sw^2)*vev)/(4*cw*sw^2), 0}},
+C[ -S[3] , -U[2] , U[31] ] == {{-1/4*(EL^2*(cw^2 + sw^2)*vev)/(cw*sw^2), 0}},
 
 C[ -U[2] , U[31] , -V[3] ] == {{I*gc33, 0}, {I*gc33, 0}, {0, 0}},
 
-C[ S[1] , -U[2] , U[2] ] == {{((-I/4)*EL^2*(cw^2 + sw^2)^2*vev)/(cw^2*sw^2), 0}},
+C[ S[1] , -U[2] , U[2] ] == {{((-1/4*I)*EL^2*(cw^2 + sw^2)^2*vev)/(cw^2*sw^2), 0}},
 
 C[ -U[4, {e1x1}] , U[4, {e2x1}] , V[4, {e3x2}] ] == {{gc35*SUNF[e3x2, e1x1, e2x1], 0}, {gc35*SUNF[e3x2, e1x1, e2x1], 0}, {0, 0}},
 
@@ -336,9 +337,9 @@ C[ -F[3, {e1x2, e1x3}] , F[3, {e2x2, e2x3}] , S[2] ] == {{gc45L[e1x2, e2x2]*Inde
 
 C[ -F[3, {e1x2, e1x3}] , F[3, {e2x2, e2x3}] , S[1] ] == {{I*gc46L[e1x2, e2x2]*IndexDelta[e1x3, e2x3], 0}, {I*gc46R[e1x2, e2x2]*IndexDelta[e1x3, e2x3], 0}},
 
-C[ S[2] , -S[3] , V[1] , V[3] ] == {{((-I/2)*EL^2)/sw, 0}},
+C[ S[2] , -S[3] , V[1] , V[3] ] == {{((-1/2*I)*EL^2)/sw, 0}},
 
-C[ -S[3] , S[1] , V[1] , V[3] ] == {{-EL^2/(2*sw), 0}},
+C[ -S[3] , S[1] , V[1] , V[3] ] == {{-1/2*EL^2/sw, 0}},
 
 C[ -S[3] , V[1] , V[3] ] == {{gc49, 0}, {0, 0}},
 
@@ -348,7 +349,7 @@ C[ -S[3] , S[1] , V[3] ] == {{-gc51, 0}, {gc51, 0}},
 
 C[ V[1] , V[3] , -V[3] ] == {{(-I)*gc52, 0}, {I*gc52, 0}, {I*gc52, 0}, {(-I)*gc52, 0}, {(-I)*gc52, 0}, {I*gc52, 0}},
 
-C[ S[2] , S[3] , V[1] , -V[3] ] == {{((-I/2)*EL^2)/sw, 0}},
+C[ S[2] , S[3] , V[1] , -V[3] ] == {{((-1/2*I)*EL^2)/sw, 0}},
 
 C[ S[3] , S[1] , V[1] , -V[3] ] == {{EL^2/(2*sw), 0}},
 
@@ -388,7 +389,7 @@ C[ -S[3] , V[3] , V[2] ] == {{gc71, 0}, {0, 0}},
 
 C[ S[2] , S[3] , -V[3] , V[2] ] == {{((I/2)*EL^2)/cw, 0}},
 
-C[ S[3] , S[1] , -V[3] , V[2] ] == {{-EL^2/(2*cw), 0}},
+C[ S[3] , S[1] , -V[3] , V[2] ] == {{-1/2*EL^2/cw, 0}},
 
 C[ S[3] , -V[3] , V[2] ] == {{gc74, 0}, {0, 0}},
 
@@ -490,28 +491,28 @@ M$FACouplings = {
      gc45R[e1x2_, e2x2_] -> -(yu[e1x2, e2x2]/Sqrt[2]),
      gc46L[e1x2_, e2x2_] -> -(Conjugate[yu[e2x2, e1x2]]/Sqrt[2]),
      gc46R[e1x2_, e2x2_] -> -(yu[e1x2, e2x2]/Sqrt[2]),
-     gc49 -> -(EL^2*vev)/(2*sw),
+     gc49 -> -1/2*(EL^2*vev)/sw,
      gc50 -> EL/(2*sw),
-     gc51 -> -EL/(2*sw),
+     gc51 -> -1/2*EL/sw,
      gc52 -> EL,
      gc55 -> (EL^2*vev)/(2*sw),
-     gc56 -> -EL/(2*sw),
-     gc57 -> -EL/(2*sw),
+     gc56 -> -1/2*EL/sw,
+     gc57 -> -1/2*EL/sw,
      gc61 -> (EL^2*vev)/(2*sw^2),
      gc62 -> -EL^2,
      gc63 -> (cw*EL)/sw,
      gc64 -> EL^2/sw^2,
      gc65R[e1x2_, e2x2_] -> -yl[e1x2, e2x2],
-     gc67 -> -(EL*(cw^2 + sw^2))/(2*cw*sw),
-     gc68 -> -(cw*EL)/(2*sw) + (EL*sw)/(2*cw),
+     gc67 -> -1/2*(EL*(cw^2 + sw^2))/(cw*sw),
+     gc68 -> -1/2*(cw*EL)/sw + (EL*sw)/(2*cw),
      gc71 -> (EL^2*vev)/(2*cw),
-     gc74 -> -(EL^2*vev)/(2*cw),
+     gc74 -> -1/2*(EL^2*vev)/cw,
      gc75 -> (cw*EL^2)/sw,
      gc79 -> (EL^2*(cw^2 + sw^2)^2*vev)/(2*cw^2*sw^2),
      gc80 -> -((cw^2*EL^2)/sw^2),
      gc81 -> -EL,
      gc82 -> (2*EL)/3,
-     gc83 -> -EL/3,
+     gc83 -> -1/3*EL,
      gc84 -> GS,
      gc85 -> GS,
      gc86[e1x2_, e2x2_] -> (EL*CKM[e1x2, e2x2])/(Sqrt[2]*sw),
@@ -520,10 +521,10 @@ M$FACouplings = {
      gc89 -> EL/(Sqrt[2]*sw),
      gc90L -> (cw*EL)/(2*sw) - (EL*sw)/(6*cw),
      gc90R -> (-2*EL*sw)/(3*cw),
-     gc91L -> -(EL*(3*cw^2 + sw^2))/(6*cw*sw),
+     gc91L -> -1/6*(EL*(3*cw^2 + sw^2))/(cw*sw),
      gc91R -> (EL*sw)/(3*cw),
      gc92 -> (EL*(cw^2 + sw^2))/(2*cw*sw),
-     gc93L -> -(EL*(cw^2 - sw^2))/(2*cw*sw),
+     gc93L -> -1/2*(EL*(cw^2 - sw^2))/(cw*sw),
      gc93R -> (EL*sw)/cw,
      gc94 -> -4*gALPG,
      gc95 -> -4*(cw^2*gALPB + gALPW*sw^2),
