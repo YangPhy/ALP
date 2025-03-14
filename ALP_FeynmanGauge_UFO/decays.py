@@ -1,6 +1,6 @@
 # This file was automatically created by FeynRules 2.3.49
 # Mathematica version: 13.1.0 for Mac OS X ARM (64-bit) (June 16, 2022)
-# Date: Sat 31 Dec 2022 16:26:51
+# Date: Fri 14 Mar 2025 16:21:02
 
 
 from object_library import all_decays, Decay

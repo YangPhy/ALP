@@ -1,6 +1,6 @@
 # This file was automatically created by FeynRules 2.3.49
 # Mathematica version: 13.1.0 for Mac OS X ARM (64-bit) (June 16, 2022)
-# Date: Sat 31 Dec 2022 16:26:51
+# Date: Fri 14 Mar 2025 16:21:02
 
 
 
@@ -205,12 +205,6 @@ G = Parameter(name = 'G',
               value = '2*cmath.sqrt(aS)*cmath.sqrt(cmath.pi)',
               texname = 'G')
 
-gALPB = Parameter(name = 'gALPB',
-                  nature = 'internal',
-                  type = 'real',
-                  value = 'cBt/fa',
-                  texname = '\\text{gALPB}')
-
 gALPG = Parameter(name = 'gALPG',
                   nature = 'internal',
                   type = 'real',
@@ -222,6 +216,12 @@ gALPp = Parameter(name = 'gALPp',
                   type = 'real',
                   value = 'caPhi/fa',
                   texname = '\\text{gALPp}')
+
+gALPB = Parameter(name = 'gALPB',
+                  nature = 'internal',
+                  type = 'real',
+                  value = 'cBt/fa',
+                  texname = '\\text{gALPB}')
 
 gALPW = Parameter(name = 'gALPW',
                   nature = 'internal',

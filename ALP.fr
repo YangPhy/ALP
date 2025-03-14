@@ -96,20 +96,20 @@ M$Parameters = {
   gALPB == {
     ParameterType    -> Internal,
     Value            -> cBt/fa,
-    InteractionOrder -> {NP,1},
+    InteractionOrder -> {{NP,1},{NPB,1}},
     Description      -> "ALP aBB coupling"
   },
   gALPW == {
     ParameterType    -> Internal,
     Value            -> cWt/fa,
-    InteractionOrder -> {NP,1},
+    InteractionOrder -> {{NP,1},{NPW,1}},
     Description      -> "ALP aWW coupling"
   },
   gALPp == {
     ParameterType    -> Internal,
     Value            -> caPhi/fa,
     InteractionOrder -> {NP,1},
-    Description      -> "ALP aWW coupling"
+    Description      -> "ALP aHH coupling"
   }
 };
 

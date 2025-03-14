@@ -1,6 +1,6 @@
 # This file was automatically created by FeynRules 2.3.49
 # Mathematica version: 13.1.0 for Mac OS X ARM (64-bit) (June 16, 2022)
-# Date: Sat 31 Dec 2022 16:22:22
+# Date: Fri 14 Mar 2025 16:19:17
 
 
 # 
@@ -53,7 +53,7 @@
 # Vertex definitions
 #
 
-   * 65 vertices written.
+   * 68 vertices written.
    * vertices.py written.
 #
 # Lorentz structure definitions
@@ -65,7 +65,7 @@
 # Coupling definitions
 #
 
-   * 37 couplings written.
+   * 42 couplings written.
    * couplings.py written.
 #
 # Coupling order definitions
